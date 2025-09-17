@@ -18,7 +18,24 @@
                 F12();
                 F13();
                 F14();
-            }
+                F15();
+                F16();
+                F17();
+                F18();
+                F19();
+                F20();
+                F21();
+                F22();
+                F23();
+                F24();
+                F25();
+                F26();
+                F27();
+                F28();
+                F29();
+                F30();
+                F31();
+        }
 
             static void F1()
             {
@@ -186,6 +203,254 @@
 
                 Console.WriteLine($"Ívhossz: {Math.Round(ivHossz, 2)}");
                 Console.WriteLine($"Körszelet területe: {Math.Round(korSzeletTerulet, 2)}");
+
             }
+        static void F15()
+        {
+            Console.Write("Kérek egy pozitív egész számot: ");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+                Console.Write(i + " ");
+            Console.WriteLine("\n");
+        }
+
+        static void F16()
+        {
+            Console.Write("Kérek egy pozitív egész számot: ");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+                Console.WriteLine(i);
+        }
+
+        static void F17()
+        {
+            Console.Write("Kérek egy pozitív egész számot: ");
+            int n = int.Parse(Console.ReadLine());
+            Console.Write("Osztói: ");
+            for (int i = 1; i <= n; i++)
+                if (n % i == 0)
+                    Console.Write(i + " ");
+            Console.WriteLine();
+        }
+
+        static void F18()
+        {
+            Console.Write("Kérek egy pozitív egész számot: ");
+            int n = int.Parse(Console.ReadLine());
+            int osszeg = 0;
+            for (int i = 1; i <= n; i++)
+                if (n % i == 0)
+                    osszeg += i;
+            Console.WriteLine("Osztók összege: " + osszeg);
+        }
+
+        static void F19()
+        {
+            Console.Write("Kérek egy pozitív egész számot: ");
+            int n = int.Parse(Console.ReadLine());
+            int osszeg = 0;
+            for (int i = 1; i <= n; i++)
+                if (n % i == 0)
+                    osszeg += i;
+            if (osszeg == 2 * n)
+                Console.WriteLine(n + " tökéletes szám.");
+            else
+                Console.WriteLine(n + " nem tökéletes szám.");
+        }
+
+        static void F20()
+        {
+            Console.Write("Hatványalap: ");
+            int alap = int.Parse(Console.ReadLine());
+            Console.Write("Kitevő: ");
+            int kitevo = int.Parse(Console.ReadLine());
+            int eredmeny = (int)Math.Pow(alap, kitevo);
+            Console.WriteLine("Hatványérték: " + eredmeny);
+        }
+
+        static void F21()
+        {
+            int szam;
+            do
+            {
+                Console.Write("Kérek egy pozitív számot: ");
+                szam = int.Parse(Console.ReadLine());
+            } while (szam <= 0);
+
+            Console.WriteLine("Beolvasott szám: " + szam);
+        }
+
+        static void F22()
+        {
+            int szam, osszeg = 0;
+            do
+            {
+                Console.Write("Kérek egy számot: ");
+                szam = int.Parse(Console.ReadLine());
+                if (szam < 10)
+                    osszeg += szam;
+            } while (szam < 10);
+
+            Console.WriteLine("Összeg: " + osszeg);
+        }
+
+        static void F23()
+        {
+            Console.Write("Kérek egy egész számot: ");
+            int n = int.Parse(Console.ReadLine());
+            int eredeti = n;
+            Console.Write(n + " = ");
+            bool elso = true;
+            while (n % 2 == 0)
+            {
+                if (!elso) Console.Write("*");
+                Console.Write("2");
+                n /= 2;
+                elso = false;
+            }
+
+            if (n > 1)
+            {
+                if (!elso) Console.Write("*");
+                Console.Write(n);
+            }
+
+            Console.WriteLine();
+        }
+
+        static void F24()
+        {
+            string s;
+            do
+            {
+                Console.Write("Kérek egy szót: ");
+                s = Console.ReadLine();
+            } while (s != "alma");
+
+            Console.WriteLine("Az alma gyümölcs!");
+        }
+
+        static void F25()
+        {
+            Console.Write("Kérek egy egész számot: ");
+            int n = int.Parse(Console.ReadLine());
+            int eredeti = n;
+            int darab = 0;
+            while (n >= 3)
+            {
+                n -= 3;
+                darab++;
+            }
+
+            Console.WriteLine($"{eredeti} = {darab}*3 + {n}");
+        }
+
+        static void F26()
+        {
+            Console.Write("Kérek egy számot: ");
+            int n = int.Parse(Console.ReadLine());
+            if (n < 2)
+            {
+                Console.WriteLine("Nem prímszám.");
+                return;
+            }
+
+            bool prim = true;
+            for (int i = 2; i * i <= n; i++)
+                if (n % i == 0)
+                    prim = false;
+            Console.WriteLine(prim ? "Prímszám." : "Nem prímszám.");
+        }
+
+        static void F27()
+        {
+            Console.Write("Kérek egy számot: ");
+            int n = int.Parse(Console.ReadLine());
+            Console.Write("Prímszámok: ");
+            for (int i = 2; i <= n; i++)
+            {
+                bool prim = true;
+                for (int j = 2; j * j <= i; j++)
+                    if (i % j == 0)
+                        prim = false;
+                if (prim) Console.Write(i + " ");
+            }
+
+            Console.WriteLine();
+        }
+
+        static void F28()
+        {
+            Console.Write("Kérek egy számot: ");
+            int n = int.Parse(Console.ReadLine());
+            Console.Write("Prímosztók: ");
+            for (int i = 2; i <= n; i++)
+            {
+                bool prim = true;
+                for (int j = 2; j * j <= i; j++)
+                    if (i % j == 0)
+                        prim = false;
+                if (prim && n % i == 0)
+                    Console.Write(i + " ");
+            }
+
+            Console.WriteLine();
+        }
+
+        static void F29()
+        {
+            Console.Write("Kérek egy számot: ");
+            int n = int.Parse(Console.ReadLine());
+            int eredeti = n;
+            Console.Write(eredeti + " = ");
+            bool elso = true;
+            for (int i = 2; i <= n; i++)
+            {
+                while (n % i == 0)
+                {
+                    if (!elso) Console.Write("*");
+                    Console.Write(i);
+                    n /= i;
+                    elso = false;
+                }
+            }
+
+            Console.WriteLine();
+        }
+
+        static void F30()
+        {
+            Console.Write("Kérek egy számot: ");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("Kérek egy számot: ");
+            int b = int.Parse(Console.ReadLine());
+            int x = a, y = b;
+            while (b != 0)
+            {
+                int t = b;
+                b = a % b;
+                a = t;
+            }
+
+            Console.WriteLine("LNKO: " + a);
+        }
+
+        static void F31()
+        {
+            Console.Write("Kérek egy számot: ");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("Kérek egy számot: ");
+            int b = int.Parse(Console.ReadLine());
+            int lnko = a, temp = b;
+            while (temp != 0)
+            {
+                int t = temp;
+                temp = lnko % temp;
+                lnko = t;
+            }
+
+            int lkt = (a * b) / lnko;
+            Console.WriteLine("LKKT: " + lkt);
         }
     }
+}
