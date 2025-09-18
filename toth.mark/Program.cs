@@ -90,27 +90,27 @@
             static void F8()
             {
                 Console.Write("Add meg az első számot: ");
-                int szamA = int.Parse(Console.ReadLine());
+                int szamA = int.Parse(Console.ReadLine()!);
 
                 Console.Write("Add meg a második számot: ");
-                int szamB = int.Parse(Console.ReadLine());
+                int szamB = int.Parse(Console.ReadLine()!);
 
-                double atlag = (szamA + szamB) / 2.0;
-                double geometricMean = Math.Sqrt(szamA * szamB);
+                double szamtani = (szamA + szamB) / 2.0;
+                double mertani = Math.Sqrt(szamA * szamB);
 
-                Console.WriteLine($"Átlag (számtani): {atlag}");
-                Console.WriteLine($"Átlag (mértani): {Math.Round(geometricMean, 2)}");
+                Console.WriteLine($"Átlag (számtani): {szamtani}");
+                Console.WriteLine($"Átlag (mértani): {Math.Round(mertani, 2)}");
             }
 
             static void F9()
             {
                 Console.WriteLine("Másodfokú egyenlet: ax² + bx + c = 0");
                 Console.Write("a = ");
-                int a = int.Parse(Console.ReadLine());
+                int a = int.Parse(Console.ReadLine()!);
                 Console.Write("b = ");
-                int b = int.Parse(Console.ReadLine());
+                int b = int.Parse(Console.ReadLine()!);
                 Console.Write("c = ");
-                int c = int.Parse(Console.ReadLine());
+                int c = int.Parse(Console.ReadLine()!);
 
                 int diszkriminans = b * b - 4 * a * c;
 
@@ -124,11 +124,11 @@
             {
                 Console.WriteLine("Másodfokú egyenlet megoldása:");
                 Console.Write("a = ");
-                int a = int.Parse(Console.ReadLine());
+                int a = int.Parse(Console.ReadLine()!);
                 Console.Write("b = ");
-                int b = int.Parse(Console.ReadLine());
+                int b = int.Parse(Console.ReadLine()!);
                 Console.Write("c = ");
-                int c = int.Parse(Console.ReadLine());
+                int c = int.Parse(Console.ReadLine()!);
 
                 int d = b * b - 4 * a * c;
 
@@ -152,10 +152,10 @@
             static void F11()
             {
                 Console.Write("Befogó 1: ");
-                int befogo1 = int.Parse(Console.ReadLine());
+                int befogo1 = int.Parse(Console.ReadLine()!);
 
                 Console.Write("Befogó 2: ");
-                int befogo2 = int.Parse(Console.ReadLine());
+                int befogo2 = int.Parse(Console.ReadLine()!);
 
                 double atfogo = Math.Sqrt(befogo1 * befogo1 + befogo2 * befogo2);
                 Console.WriteLine($"Átfogó hossza: {Math.Round(atfogo, 2)}");
@@ -164,11 +164,11 @@
             static void F12()
             {
                 Console.Write("a él: ");
-                int a = int.Parse(Console.ReadLine());
+                int a = int.Parse(Console.ReadLine()!);
                 Console.Write("b él: ");
-                int b = int.Parse(Console.ReadLine());
+                int b = int.Parse(Console.ReadLine()!);
                 Console.Write("c él: ");
-                int c = int.Parse(Console.ReadLine());
+                int c = int.Parse(Console.ReadLine()!);
 
                 int felszin = 2 * (a * b + b * c + a * c);
                 int terfogat = a * b * c;
@@ -180,7 +180,7 @@
             static void F13()
             {
                 Console.Write("Add meg a kör átmérőjét: ");
-                double diameter = double.Parse(Console.ReadLine());
+                double diameter = double.Parse(Console.ReadLine()!);
 
                 double radius = diameter / 2;
                 double kerulet = 2 * Math.PI * radius;
@@ -193,10 +193,10 @@
             static void F14()
             {
                 Console.Write("Sugár (r): ");
-                int radius = int.Parse(Console.ReadLine());
+                int radius = int.Parse(Console.ReadLine()!);
 
                 Console.Write("Középponti szög (fok): ");
-                int angle = int.Parse(Console.ReadLine());
+                int angle = int.Parse(Console.ReadLine()!);
 
                 double ivHossz = 2 * Math.PI * radius * angle / 360;
                 double korSzeletTerulet = Math.PI * radius * radius * angle / 360;
@@ -208,7 +208,7 @@
         static void F15()
         {
             Console.Write("Kérek egy pozitív egész számot: ");
-            int n = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine()!);
             for (int i = 1; i <= n; i++)
                 Console.Write(i + " ");
             Console.WriteLine("\n");
@@ -217,7 +217,7 @@
         static void F16()
         {
             Console.Write("Kérek egy pozitív egész számot: ");
-            int n = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine()!);
             for (int i = 1; i <= n; i++)
                 Console.WriteLine(i);
         }
@@ -225,7 +225,7 @@
         static void F17()
         {
             Console.Write("Kérek egy pozitív egész számot: ");
-            int n = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine()!);
             Console.Write("Osztói: ");
             for (int i = 1; i <= n; i++)
                 if (n % i == 0)
@@ -236,7 +236,7 @@
         static void F18()
         {
             Console.Write("Kérek egy pozitív egész számot: ");
-            int n = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine()!);
             int osszeg = 0;
             for (int i = 1; i <= n; i++)
                 if (n % i == 0)
@@ -247,7 +247,7 @@
         static void F19()
         {
             Console.Write("Kérek egy pozitív egész számot: ");
-            int n = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine()!);
             int osszeg = 0;
             for (int i = 1; i <= n; i++)
                 if (n % i == 0)
@@ -261,9 +261,9 @@
         static void F20()
         {
             Console.Write("Hatványalap: ");
-            int alap = int.Parse(Console.ReadLine());
+            int alap = int.Parse(Console.ReadLine()!);
             Console.Write("Kitevő: ");
-            int kitevo = int.Parse(Console.ReadLine());
+            int kitevo = int.Parse(Console.ReadLine()!);
             int eredmeny = (int)Math.Pow(alap, kitevo);
             Console.WriteLine("Hatványérték: " + eredmeny);
         }
@@ -274,7 +274,7 @@
             do
             {
                 Console.Write("Kérek egy pozitív számot: ");
-                szam = int.Parse(Console.ReadLine());
+                szam = int.Parse(Console.ReadLine()!);
             } while (szam <= 0);
 
             Console.WriteLine("Beolvasott szám: " + szam);
@@ -286,7 +286,7 @@
             do
             {
                 Console.Write("Kérek egy számot: ");
-                szam = int.Parse(Console.ReadLine());
+                szam = int.Parse(Console.ReadLine()!);
                 if (szam < 10)
                     osszeg += szam;
             } while (szam < 10);
@@ -297,7 +297,7 @@
         static void F23()
         {
             Console.Write("Kérek egy egész számot: ");
-            int n = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine()!);
             int eredeti = n;
             Console.Write(n + " = ");
             bool elso = true;
@@ -324,7 +324,7 @@
             do
             {
                 Console.Write("Kérek egy szót: ");
-                s = Console.ReadLine();
+                s = Console.ReadLine()!;
             } while (s != "alma");
 
             Console.WriteLine("Az alma gyümölcs!");
@@ -333,7 +333,7 @@
         static void F25()
         {
             Console.Write("Kérek egy egész számot: ");
-            int n = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine()!);
             int eredeti = n;
             int darab = 0;
             while (n >= 3)
@@ -348,7 +348,7 @@
         static void F26()
         {
             Console.Write("Kérek egy számot: ");
-            int n = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine()!);
             if (n < 2)
             {
                 Console.WriteLine("Nem prímszám.");
@@ -365,7 +365,7 @@
         static void F27()
         {
             Console.Write("Kérek egy számot: ");
-            int n = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine()!);
             Console.Write("Prímszámok: ");
             for (int i = 2; i <= n; i++)
             {
@@ -382,7 +382,7 @@
         static void F28()
         {
             Console.Write("Kérek egy számot: ");
-            int n = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine()!);
             Console.Write("Prímosztók: ");
             for (int i = 2; i <= n; i++)
             {
@@ -400,7 +400,7 @@
         static void F29()
         {
             Console.Write("Kérek egy számot: ");
-            int n = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine()!);
             int eredeti = n;
             Console.Write(eredeti + " = ");
             bool elso = true;
@@ -421,9 +421,9 @@
         static void F30()
         {
             Console.Write("Kérek egy számot: ");
-            int a = int.Parse(Console.ReadLine());
+            int a = int.Parse(Console.ReadLine()!);
             Console.Write("Kérek egy számot: ");
-            int b = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine()!);
             int x = a, y = b;
             while (b != 0)
             {
@@ -438,9 +438,9 @@
         static void F31()
         {
             Console.Write("Kérek egy számot: ");
-            int a = int.Parse(Console.ReadLine());
+            int a = int.Parse(Console.ReadLine()!);
             Console.Write("Kérek egy számot: ");
-            int b = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine()!);
             int lnko = a, temp = b;
             while (temp != 0)
             {
